@@ -11,7 +11,9 @@ public class Words {
 
         for (String line : lines) {
 
-            String[] arr = line.toLowerCase().replaceAll("[^0-9a-zA-Z\u0430-\u044F\u0410-\u042F\u0100-\u017F\u0180-\u024F\u0080-\u00FF]", " ").trim().split("\\s");
+            String[] arr = line.toLowerCase()
+                    .replaceAll("[^0-9a-zA-Z\u0430-\u044F\u0410-\u042F\u0100-\u017F\u0180-\u024F\u0080-\u00FF]", " ")
+                    .trim().split("\\s");
 
             for (String word : arr) {
                 if (word.length() < 4) continue;
@@ -54,6 +56,7 @@ public class Words {
     private static class WordsStats {
         private final String word;
         private final int occurrences;
+
 
         public WordsStats(String word, int occurrences) {
             this.word = word;
