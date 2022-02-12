@@ -30,7 +30,7 @@ public class Words {
             list.add(new WordsStats(entry.getKey(), entry.getValue()));
         }
 
-        list.sort( new Comparator<>() {
+        list.sort(new Comparator<>() {
             @Override
             public int compare(WordsStats o1, WordsStats o2) {
                 if (o1.getOccurrences() > o2.getOccurrences()) {
